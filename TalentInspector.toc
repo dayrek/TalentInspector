@@ -1,0 +1,7 @@
+## Title: Talent Inspector
+## Notes: Inspect talents of others in your Guild, Raid, or Party. Only if they have this addon as-well.
+## Version: 0.9
+## Author: Rehgar - GG @ Elysium
+## Interface: 11200
+TalentInspector.xml
+TalentInspector.lua

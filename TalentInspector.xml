@@ -1,0 +1,2109 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" 
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+ xsi:schemaLocation="http://www.blizzard.com/wow/ui/ 
+ ..\..\FrameXML\UI.xsd">
+ <!--
+	<Script file="GG.lua"/>
+	<Frame name="GGFrame" parent="UIParent" frameStrata="MEDIUM" toplevel="false" movable="false" enableMouse="false">
+	<Size>
+		<AbsDimension x="0" y="0"/>
+	</Size>
+	<Scripts>
+		<OnLoad>
+		</OnLoad>
+		<OnEvent>
+		   GG_OnEvent(event)
+		</OnEvent>
+
+	</Scripts>
+	</Frame> 
+-->
+<Frame name="TalentWindowFrame" parent="UIParent" frameStrata="MEDIUM" toplevel="false" hidden="true" movable="true" enableMouse="true">
+	<Size>
+		<AbsDimension x="280" y="413"/>
+	</Size>
+	<Anchors>
+		<Anchor point="CENTER" relativeTo="UIParent">
+			<Offset>
+				<AbsDimension x="-380" y="100" />
+			</Offset>
+		</Anchor>
+	</Anchors>
+	
+	<Backdrop bgFile="Interface\TalentFrame\ShamanElementalCombat-TopLeft" edgeFile="Interface\DialogFrame\UI-DialogBox-Border" tile="true">
+		<EdgeSize>
+			<AbsValue val="32"/>
+		</EdgeSize>
+		<TileSize>
+			<AbsValue val="372"/>
+		</TileSize>
+		<BackgroundInsets>
+			<AbsInset left="11" right="12" top="12" bottom="11"/>
+		</BackgroundInsets>
+	</Backdrop>
+	
+	<Layers>
+	
+	    <layer level="BORDER">
+			<!--
+			<Texture name="TalentI_Talent0BG" file="Interface\TalentFrame\UI-TalentFrame-BotLeft">
+				<Size>
+					<AbsDimension x="36" y="36"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="-30" y="140"/>
+						</Offset>
+					</Anchor>
+				</Anchors>				
+			</Texture>	-->
+			
+		</layer>
+		
+		
+		<Layer level="ARTWORK">
+			<Texture name="GameMenuFrameHeader" file="Interface\DialogFrame\UI-DialogBox-Header">
+				<Size>
+					<AbsDimension x="540" y="64"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOP">
+						<Offset>
+							<AbsDimension x="0" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Texture>
+			<FontString name="$parentText" inherits="GameFontNormal" text="Talents">
+				<Anchors>
+					<Anchor point="TOP">
+						<Offset>
+							<AbsDimension x="2" y="-13"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</FontString>
+			
+		    <!-- tab 1 -->
+			
+			<Texture name="TalentI_Tab1" file="Interface\TalentFrame\UI-TalentFrame-BotLeft" hidden="false">
+				<Size>
+					<AbsDimension x="50" y="30"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="BOTTOM">
+						<Offset>
+							<AbsDimension x="-100" y="-20"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Texture>
+			
+			<Texture name="TalentI_Tab11" file="Interface\TalentFrame\UI-TalentFrame-BotRight" hidden="false">
+				<Size>
+					<AbsDimension x="50" y="30"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="BOTTOM">
+						<Offset>
+							<AbsDimension x="-55" y="-20"/>
+						</Offset>
+					</Anchor>
+				</Anchors>					
+			</Texture>
+			
+			
+			<FontString name="Tab1Text" font="Fonts\FRIZQT__.TTF" virtual="true" text="Textos">
+   				<FontHeight>
+    				<AbsValue val="9"/>
+    			</FontHeight>
+				<Color r="0.8" g="0.8" b="0.0" a="1.0"/>
+				<Anchors>
+					<Anchor point="BOTTOM">
+						<Offset>
+							<AbsDimension x="-85" y="-5"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</FontString>
+			
+			<!-- tab2 -->
+			
+			
+			<Texture name="TalentI_Tab2" file="Interface\TalentFrame\UI-TalentFrame-BotLeft" hidden="false">
+				<Size>
+					<AbsDimension x="50" y="30"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="BOTTOM">
+						<Offset>
+							<AbsDimension x="-15" y="-20"/>
+						</Offset>
+					</Anchor>
+				</Anchors>					
+			</Texture>
+			
+			<Texture name="TalentI_Tab22" file="Interface\TalentFrame\UI-TalentFrame-BotRight" hidden="false">
+				<Size>
+					<AbsDimension x="50" y="30"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="BOTTOM">
+						<Offset>
+							<AbsDimension x="30" y="-20"/>
+						</Offset>
+					</Anchor>
+				</Anchors>					
+			</Texture>
+			
+			<FontString name="Tab2Text" font="Fonts\FRIZQT__.TTF" virtual="true" text="Textos">
+   				<FontHeight>
+    				<AbsValue val="9"/>
+    			</FontHeight>
+				<Color r="0.8" g="0.8" b="0.0" a="1.0"/>
+				<Anchors>
+					<Anchor point="BOTTOM">
+						<Offset>
+							<AbsDimension x="0" y="-5"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</FontString>
+			
+			<!-- tab3 -->
+			
+			<Texture name="TalentI_Tab3" file="Interface\TalentFrame\UI-TalentFrame-BotLeft" hidden="false">
+				<Size>
+					<AbsDimension x="50" y="30"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="BOTTOM">
+						<Offset>
+							<AbsDimension x="70" y="-20"/>
+						</Offset>
+					</Anchor>
+				</Anchors>					
+			</Texture>
+			
+			<Texture name="TalentI_Tab33" file="Interface\TalentFrame\UI-TalentFrame-BotRight" hidden="false">
+				<Size>
+					<AbsDimension x="50" y="30"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="BOTTOM">
+						<Offset>
+							<AbsDimension x="115" y="-20"/>
+						</Offset>
+					</Anchor>
+				</Anchors>					
+			</Texture>
+			
+			<FontString name="Tab3Text" font="Fonts\FRIZQT__.TTF" virtual="true" text="Textos">
+   				<FontHeight>
+    				<AbsValue val="9"/>
+    			</FontHeight>
+				<Color r="0.8" g="0.8" b="0.0" a="1.0"/>
+				<Anchors>
+					<Anchor point="BOTTOM">
+						<Offset>
+							<AbsDimension x="85" y="-5"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</FontString>
+			
+			
+			
+			
+			
+			
+            <!-- row one -->			
+			
+			<Texture name="TalentI_Talent0" file="Interface\Icons\Spell_Nature_WispSplode" hidden="true" AlphaMode="MOD">
+				<Size>
+					<AbsDimension x="36" y="36"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="-90" y="140"/>
+						</Offset>
+					</Anchor>
+				</Anchors>				
+			</Texture>					
+				
+			<Texture name="TalentI_Talent1" file="Interface\Icons\Spell_Fire_Fireball" hidden="true" AlphaMode="MOD">
+				<Size>
+					<AbsDimension x="36" y="36"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="-30" y="140"/>
+						</Offset>
+					</Anchor>
+				</Anchors>				
+			</Texture>
+			
+			<Texture name="TalentI_Talent2" file="Interface\Icons\Spell_Fire_Fireball" hidden="true" AlphaMode="MOD">
+				<Size>
+					<AbsDimension x="36" y="36"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="30" y="140"/>
+						</Offset>
+					</Anchor>
+				</Anchors>				
+			</Texture>			
+			
+			<Texture name="TalentI_Talent3" file="Interface\Icons\Spell_Fire_Fireball" hidden="true" AlphaMode="MOD">
+				<Size>
+					<AbsDimension x="36" y="36"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="90" y="140"/>
+						</Offset>
+					</Anchor>
+				</Anchors>				
+			</Texture>		
+
+            <!-- row two -->
+
+			<Texture name="TalentI_Talent4" file="Interface\Icons\Spell_Fire_Fireball" hidden="true" AlphaMode="MOD">
+				<Size>
+					<AbsDimension x="36" y="36"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="-90" y="90"/>
+						</Offset>
+					</Anchor>
+				</Anchors>				
+			</Texture>
+
+			<Texture name="TalentI_Talent5" file="Interface\Icons\Spell_Fire_Fireball" hidden="true" AlphaMode="MOD">
+				<Size>
+					<AbsDimension x="36" y="36"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="-30" y="90"/>
+						</Offset>
+					</Anchor>
+				</Anchors>				
+			</Texture>			
+			
+			<Texture name="TalentI_Talent6" file="Interface\Icons\Spell_Fire_Fireball" hidden="true" AlphaMode="MOD">
+				<Size>
+					<AbsDimension x="36" y="36"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="30" y="90"/>
+						</Offset>
+					</Anchor>
+				</Anchors>				
+			</Texture>			
+
+			<Texture name="TalentI_Talent7" file="Interface\Icons\Spell_Fire_Fireball" hidden="true" AlphaMode="MOD">
+				<Size>
+					<AbsDimension x="36" y="36"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="90" y="90"/>
+						</Offset>
+					</Anchor>
+				</Anchors>				
+			</Texture>	
+
+            <!-- row three -->	
+     
+			<Texture name="TalentI_Talent8" file="Interface\Icons\Spell_Fire_Fireball" hidden="true" AlphaMode="MOD">
+				<Size>
+					<AbsDimension x="36" y="36"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="-90" y="40"/>
+						</Offset>
+					</Anchor>
+				</Anchors>				
+			</Texture>	
+
+			<Texture name="TalentI_Talent9" file="Interface\Icons\Spell_Fire_Fireball" hidden="true" AlphaMode="MOD">
+				<Size>
+					<AbsDimension x="36" y="36"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="-30" y="40"/>
+						</Offset>
+					</Anchor>
+				</Anchors>				
+			</Texture>			
+			
+			<Texture name="TalentI_Talent10" file="Interface\Icons\Spell_Fire_Fireball" hidden="true" AlphaMode="MOD">
+				<Size>
+					<AbsDimension x="36" y="36"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="30" y="40"/>
+						</Offset>
+					</Anchor>
+				</Anchors>				
+			</Texture>	
+
+			<Texture name="TalentI_Talent11" file="Interface\Icons\Spell_Fire_Fireball" hidden="true" AlphaMode="MOD">
+				<Size>
+					<AbsDimension x="36" y="36"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="90" y="40"/>
+						</Offset>
+					</Anchor>
+				</Anchors>				
+			</Texture>
+
+            <!-- row four -->				
+
+			<Texture name="TalentI_Talent12" file="Interface\Icons\Spell_Fire_Fireball" hidden="true" AlphaMode="MOD">
+				<Size>
+					<AbsDimension x="36" y="36"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="-90" y="-10"/>
+						</Offset>
+					</Anchor>
+				</Anchors>				
+			</Texture>
+
+			<Texture name="TalentI_Talent13" file="Interface\Icons\Spell_Fire_Fireball" hidden="true" AlphaMode="MOD">
+				<Size>
+					<AbsDimension x="36" y="36"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="-30" y="-10"/>
+						</Offset>
+					</Anchor>
+				</Anchors>				
+			</Texture>
+			
+			<Texture name="TalentI_Talent14" file="Interface\Icons\Spell_Fire_Fireball" hidden="true" AlphaMode="MOD">
+				<Size>
+					<AbsDimension x="36" y="36"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="30" y="-10"/>
+						</Offset>
+					</Anchor>
+				</Anchors>				
+			</Texture>
+			
+			<Texture name="TalentI_Talent15" file="Interface\Icons\Spell_Fire_Fireball" hidden="true" AlphaMode="MOD">
+				<Size>
+					<AbsDimension x="36" y="36"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="90" y="-10"/>
+						</Offset>
+					</Anchor>
+				</Anchors>				
+			</Texture>
+
+            <!-- row five -->	
+
+			<Texture name="TalentI_Talent16" file="Interface\Icons\Spell_Fire_Fireball" hidden="true" AlphaMode="MOD">
+				<Size>
+					<AbsDimension x="36" y="36"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="-90" y="-60"/>
+						</Offset>
+					</Anchor>
+				</Anchors>				
+			</Texture>	
+
+			<Texture name="TalentI_Talent17" file="Interface\Icons\Spell_Fire_Fireball" hidden="true" AlphaMode="MOD">
+				<Size>
+					<AbsDimension x="36" y="36"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="-30" y="-60"/>
+						</Offset>
+					</Anchor>
+				</Anchors>				
+			</Texture>
+			
+			<Texture name="TalentI_Talent18" file="Interface\Icons\Spell_Fire_Fireball" hidden="true" AlphaMode="MOD">
+				<Size>
+					<AbsDimension x="36" y="36"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="30" y="-60"/>
+						</Offset>
+					</Anchor>
+				</Anchors>				
+			</Texture>
+			
+			<Texture name="TalentI_Talent19" file="Interface\Icons\Spell_Fire_Fireball" hidden="true" AlphaMode="MOD">
+				<Size>
+					<AbsDimension x="36" y="36"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="90" y="-60"/>
+						</Offset>
+					</Anchor>
+				</Anchors>				
+			</Texture>	
+
+            <!-- row six -->	
+
+			<Texture name="TalentI_Talent20" file="Interface\Icons\Spell_Fire_Fireball" hidden="true" AlphaMode="MOD">
+				<Size>
+					<AbsDimension x="36" y="36"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="-90" y="-110"/>
+						</Offset>
+					</Anchor>
+				</Anchors>				
+			</Texture>	
+
+			<Texture name="TalentI_Talent21" file="Interface\Icons\Spell_Fire_Fireball" hidden="true" AlphaMode="MOD">
+				<Size>
+					<AbsDimension x="36" y="36"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="-30" y="-110"/>
+						</Offset>
+					</Anchor>
+				</Anchors>				
+			</Texture>	
+
+			<Texture name="TalentI_Talent22" file="Interface\Icons\Spell_Fire_Fireball" hidden="true" AlphaMode="MOD">
+				<Size>
+					<AbsDimension x="36" y="36"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="30" y="-110"/>
+						</Offset>
+					</Anchor>
+				</Anchors>				
+			</Texture>	
+
+			<Texture name="TalentI_Talent23" file="Interface\Icons\Spell_Fire_Fireball" hidden="true" AlphaMode="MOD">
+				<Size>
+					<AbsDimension x="36" y="36"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="90" y="-110"/>
+						</Offset>
+					</Anchor>
+				</Anchors>				
+			</Texture>	
+
+            <!-- row seven -->	
+
+			<Texture name="TalentI_Talent24" file="Interface\Icons\Spell_Fire_Fireball" hidden="true" AlphaMode="MOD">
+				<Size>
+					<AbsDimension x="36" y="36"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="-90" y="-160"/>
+						</Offset>
+					</Anchor>
+				</Anchors>				
+			</Texture>	
+
+			<Texture name="TalentI_Talent25" file="Interface\Icons\Spell_Fire_Fireball" hidden="true" AlphaMode="MOD">
+				<Size>
+					<AbsDimension x="36" y="36"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="-30" y="-160"/>
+						</Offset>
+					</Anchor>
+				</Anchors>				
+			</Texture>	
+
+			<Texture name="TalentI_Talent26" file="Interface\Icons\Spell_Fire_Fireball" hidden="true" AlphaMode="MOD">
+				<Size>
+					<AbsDimension x="36" y="36"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="30" y="-160"/>
+						</Offset>
+					</Anchor>
+				</Anchors>				
+			</Texture>	
+
+			<Texture name="TalentI_Talent27" file="Interface\Icons\Spell_Fire_Fireball" hidden="true" AlphaMode="MOD">
+				<Size>
+					<AbsDimension x="36" y="36"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="90" y="-160"/>
+						</Offset>
+					</Anchor>
+				</Anchors>				
+			</Texture>		
+			
+			
+			
+			
+		</Layer>
+		
+		
+		
+		
+		
+		
+		
+		<Layer level="OVERLAY">
+		
+		    <!-- row one x="-90" y="140" -->
+			
+			<Texture name="TalentI_Talent0BG" file="Interface\TalentFrame\TalentFrame-RankBorder" hidden="true">
+				<Size>
+					<AbsDimension x="32" y="32"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="-72" y="122"/>
+						</Offset>
+					</Anchor>
+				</Anchors>				
+			</Texture>	
+			<FontString name="TalentI_Talent0Text" inherits="GameFontNormal" text="0" hidden="true">		
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="-72" y="122"/>
+						</Offset>
+					</Anchor>
+				</Anchors>	
+			</FontString>
+			
+			
+			<Texture name="TalentI_Talent1BG" file="Interface\TalentFrame\TalentFrame-RankBorder" hidden="true">
+				<Size>
+					<AbsDimension x="32" y="32"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="-12" y="122"/>
+						</Offset>
+					</Anchor>
+				</Anchors>				
+			</Texture>	
+			<FontString name="TalentI_Talent1Text" inherits="GameFontNormal" text="0" hidden="true">		
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="-12" y="122"/>
+						</Offset>
+					</Anchor>
+				</Anchors>	
+			</FontString>
+
+			<Texture name="TalentI_Talent2BG" file="Interface\TalentFrame\TalentFrame-RankBorder" hidden="true">
+				<Size>
+					<AbsDimension x="32" y="32"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="48" y="122"/>
+						</Offset>
+					</Anchor>
+				</Anchors>				
+			</Texture>	
+			<FontString name="TalentI_Talent2Text" inherits="GameFontNormal" text="0" hidden="true">		
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="48" y="122"/>
+						</Offset>
+					</Anchor>
+				</Anchors>	
+			</FontString>
+
+			<Texture name="TalentI_Talent3BG" file="Interface\TalentFrame\TalentFrame-RankBorder" hidden="true">
+				<Size>
+					<AbsDimension x="32" y="32"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="108" y="122"/>
+						</Offset>
+					</Anchor>
+				</Anchors>				
+			</Texture>	
+			<FontString name="TalentI_Talent3Text" inherits="GameFontNormal" text="0" hidden="true">		
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="108" y="122"/>
+						</Offset>
+					</Anchor>
+				</Anchors>	
+			</FontString>			
+			
+			
+		    <!-- row two <AbsDimension x="-90" y="90"/> -->	
+
+			<Texture name="TalentI_Talent4BG" file="Interface\TalentFrame\TalentFrame-RankBorder" hidden="true">
+				<Size>
+					<AbsDimension x="32" y="32"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="-72" y="72"/>
+						</Offset>
+					</Anchor>
+				</Anchors>				
+			</Texture>	
+			<FontString name="TalentI_Talent4Text" inherits="GameFontNormal" text="0" hidden="true">		
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="-72" y="72"/>
+						</Offset>
+					</Anchor>
+				</Anchors>	
+			</FontString>	
+
+			<Texture name="TalentI_Talent5BG" file="Interface\TalentFrame\TalentFrame-RankBorder" hidden="true">
+				<Size>
+					<AbsDimension x="32" y="32"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="-12" y="72"/>
+						</Offset>
+					</Anchor>
+				</Anchors>				
+			</Texture>	
+			<FontString name="TalentI_Talent5Text" inherits="GameFontNormal" text="0" hidden="true">		
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="-12" y="72"/>
+						</Offset>
+					</Anchor>
+				</Anchors>	
+			</FontString>	
+
+			<Texture name="TalentI_Talent6BG" file="Interface\TalentFrame\TalentFrame-RankBorder" hidden="true">
+				<Size>
+					<AbsDimension x="32" y="32"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="48" y="72"/>
+						</Offset>
+					</Anchor>
+				</Anchors>				
+			</Texture>	
+			<FontString name="TalentI_Talent6Text" inherits="GameFontNormal" text="0" hidden="true">		
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="48" y="72"/>
+						</Offset>
+					</Anchor>
+				</Anchors>	
+			</FontString>	
+
+			<Texture name="TalentI_Talent7BG" file="Interface\TalentFrame\TalentFrame-RankBorder" hidden="true">
+				<Size>
+					<AbsDimension x="32" y="32"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="108" y="72"/>
+						</Offset>
+					</Anchor>
+				</Anchors>				
+			</Texture>	
+			<FontString name="TalentI_Talent7Text" inherits="GameFontNormal" text="0" hidden="true">		
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="108" y="72"/>
+						</Offset>
+					</Anchor>
+				</Anchors>	
+			</FontString>
+
+		    <!-- row three -->			
+
+			<Texture name="TalentI_Talent8BG" file="Interface\TalentFrame\TalentFrame-RankBorder" hidden="true">
+				<Size>
+					<AbsDimension x="32" y="32"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="-72" y="22"/>
+						</Offset>
+					</Anchor>
+				</Anchors>				
+			</Texture>	
+			<FontString name="TalentI_Talent8Text" inherits="GameFontNormal" text="0" hidden="true">		
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="-72" y="22"/>
+						</Offset>
+					</Anchor>
+				</Anchors>	
+			</FontString>
+
+			<Texture name="TalentI_Talent9BG" file="Interface\TalentFrame\TalentFrame-RankBorder" hidden="true">
+				<Size>
+					<AbsDimension x="32" y="32"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="-12" y="22"/>
+						</Offset>
+					</Anchor>
+				</Anchors>				
+			</Texture>	
+			<FontString name="TalentI_Talent9Text" inherits="GameFontNormal" text="0" hidden="true">		
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="-12" y="22"/>
+						</Offset>
+					</Anchor>
+				</Anchors>	
+			</FontString>	
+
+			<Texture name="TalentI_Talent10BG" file="Interface\TalentFrame\TalentFrame-RankBorder" hidden="true">
+				<Size>
+					<AbsDimension x="32" y="32"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="48" y="22"/>
+						</Offset>
+					</Anchor>
+				</Anchors>				
+			</Texture>	
+			<FontString name="TalentI_Talent10Text" inherits="GameFontNormal" text="0" hidden="true">		
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="48" y="22"/>
+						</Offset>
+					</Anchor>
+				</Anchors>	
+			</FontString>	
+
+			<Texture name="TalentI_Talent11BG" file="Interface\TalentFrame\TalentFrame-RankBorder" hidden="true">
+				<Size>
+					<AbsDimension x="32" y="32"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="108" y="22"/>
+						</Offset>
+					</Anchor>
+				</Anchors>				
+			</Texture>	
+			<FontString name="TalentI_Talent11Text" inherits="GameFontNormal" text="0" hidden="true">		
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="108" y="22"/>
+						</Offset>
+					</Anchor>
+				</Anchors>	
+			</FontString>
+
+		    <!-- row four -->	
+			
+			<Texture name="TalentI_Talent12BG" file="Interface\TalentFrame\TalentFrame-RankBorder" hidden="true">
+				<Size>
+					<AbsDimension x="32" y="32"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="-72" y="-28"/>
+						</Offset>
+					</Anchor>
+				</Anchors>				
+			</Texture>	
+			<FontString name="TalentI_Talent12Text" inherits="GameFontNormal" text="0" hidden="true">		
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="-72" y="-28"/>
+						</Offset>
+					</Anchor>
+				</Anchors>	
+			</FontString>	
+
+			<Texture name="TalentI_Talent13BG" file="Interface\TalentFrame\TalentFrame-RankBorder" hidden="true">
+				<Size>
+					<AbsDimension x="32" y="32"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="-12" y="-28"/>
+						</Offset>
+					</Anchor>
+				</Anchors>				
+			</Texture>	
+			<FontString name="TalentI_Talent13Text" inherits="GameFontNormal" text="0" hidden="true">		
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="-12" y="-28"/>
+						</Offset>
+					</Anchor>
+				</Anchors>	
+			</FontString>	
+
+			<Texture name="TalentI_Talent14BG" file="Interface\TalentFrame\TalentFrame-RankBorder" hidden="true">
+				<Size>
+					<AbsDimension x="32" y="32"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="48" y="-28"/>
+						</Offset>
+					</Anchor>
+				</Anchors>				
+			</Texture>	
+			<FontString name="TalentI_Talent14Text" inherits="GameFontNormal" text="0" hidden="true">		
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="48" y="-28"/>
+						</Offset>
+					</Anchor>
+				</Anchors>	
+			</FontString>
+
+			<Texture name="TalentI_Talent15BG" file="Interface\TalentFrame\TalentFrame-RankBorder" hidden="true">
+				<Size>
+					<AbsDimension x="32" y="32"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="108" y="-28"/>
+						</Offset>
+					</Anchor>
+				</Anchors>				
+			</Texture>	
+			<FontString name="TalentI_Talent15Text" inherits="GameFontNormal" text="0" hidden="true">		
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="108" y="-28"/>
+						</Offset>
+					</Anchor>
+				</Anchors>	
+			</FontString>	
+
+		    <!-- row five -->	
+
+			<Texture name="TalentI_Talent16BG" file="Interface\TalentFrame\TalentFrame-RankBorder" hidden="true">
+				<Size>
+					<AbsDimension x="32" y="32"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="-72" y="-78"/>
+						</Offset>
+					</Anchor>
+				</Anchors>				
+			</Texture>	
+			<FontString name="TalentI_Talent16Text" inherits="GameFontNormal" text="0" hidden="true">		
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="-72" y="-78"/>
+						</Offset>
+					</Anchor>
+				</Anchors>	
+			</FontString>
+
+			<Texture name="TalentI_Talent17BG" file="Interface\TalentFrame\TalentFrame-RankBorder" hidden="true">
+				<Size>
+					<AbsDimension x="32" y="32"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="-12" y="-78"/>
+						</Offset>
+					</Anchor>
+				</Anchors>				
+			</Texture>	
+			<FontString name="TalentI_Talent17Text" inherits="GameFontNormal" text="0" hidden="true">		
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="-12" y="-78"/>
+						</Offset>
+					</Anchor>
+				</Anchors>	
+			</FontString>			
+			
+			<Texture name="TalentI_Talent18BG" file="Interface\TalentFrame\TalentFrame-RankBorder" hidden="true">
+				<Size>
+					<AbsDimension x="32" y="32"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="48" y="-78"/>
+						</Offset>
+					</Anchor>
+				</Anchors>				
+			</Texture>	
+			<FontString name="TalentI_Talent18Text" inherits="GameFontNormal" text="0" hidden="true">		
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="48" y="-78"/>
+						</Offset>
+					</Anchor>
+				</Anchors>	
+			</FontString>	
+			
+			
+			<Texture name="TalentI_Talent19BG" file="Interface\TalentFrame\TalentFrame-RankBorder" hidden="true">
+				<Size>
+					<AbsDimension x="32" y="32"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="108" y="-78"/>
+						</Offset>
+					</Anchor>
+				</Anchors>				
+			</Texture>	
+			<FontString name="TalentI_Talent19Text" inherits="GameFontNormal" text="0" hidden="true">		
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="108" y="-78"/>
+						</Offset>
+					</Anchor>
+				</Anchors>	
+			</FontString>	
+			
+		    <!-- row six -->
+			
+			<Texture name="TalentI_Talent20BG" file="Interface\TalentFrame\TalentFrame-RankBorder" hidden="true">
+				<Size>
+					<AbsDimension x="32" y="32"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="-72" y="-128"/>
+						</Offset>
+					</Anchor>
+				</Anchors>				
+			</Texture>	
+			<FontString name="TalentI_Talent20Text" inherits="GameFontNormal" text="0" hidden="true">		
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="-72" y="-128"/>
+						</Offset>
+					</Anchor>
+				</Anchors>	
+			</FontString>
+			
+			<Texture name="TalentI_Talent21BG" file="Interface\TalentFrame\TalentFrame-RankBorder" hidden="true">
+				<Size>
+					<AbsDimension x="32" y="32"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="-12" y="-128"/>
+						</Offset>
+					</Anchor>
+				</Anchors>				
+			</Texture>	
+			<FontString name="TalentI_Talent21Text" inherits="GameFontNormal" text="0" hidden="true">		
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="-12" y="-128"/>
+						</Offset>
+					</Anchor>
+				</Anchors>	
+			</FontString>
+			
+			<Texture name="TalentI_Talent22BG" file="Interface\TalentFrame\TalentFrame-RankBorder" hidden="true">
+				<Size>
+					<AbsDimension x="32" y="32"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="48" y="-128"/>
+						</Offset>
+					</Anchor>
+				</Anchors>				
+			</Texture>	
+			<FontString name="TalentI_Talent22Text" inherits="GameFontNormal" text="0" hidden="true">		
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="48" y="-128"/>
+						</Offset>
+					</Anchor>
+				</Anchors>	
+			</FontString>
+			
+			<Texture name="TalentI_Talent23BG" file="Interface\TalentFrame\TalentFrame-RankBorder" hidden="true">
+				<Size>
+					<AbsDimension x="32" y="32"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="108" y="-128"/>
+						</Offset>
+					</Anchor>
+				</Anchors>				
+			</Texture>	
+			<FontString name="TalentI_Talent23Text" inherits="GameFontNormal" text="0" hidden="true">		
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="108" y="-128"/>
+						</Offset>
+					</Anchor>
+				</Anchors>	
+			</FontString>
+			
+		    <!-- row seven -->
+			
+			<Texture name="TalentI_Talent24BG" file="Interface\TalentFrame\TalentFrame-RankBorder" hidden="true">
+				<Size>
+					<AbsDimension x="32" y="32"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="-72" y="-178"/>
+						</Offset>
+					</Anchor>
+				</Anchors>				
+			</Texture>	
+			<FontString name="TalentI_Talent24Text" inherits="GameFontNormal" text="0" hidden="true">		
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="-72" y="-178"/>
+						</Offset>
+					</Anchor>
+				</Anchors>	
+			</FontString>
+			
+			<Texture name="TalentI_Talent25BG" file="Interface\TalentFrame\TalentFrame-RankBorder" hidden="true">
+				<Size>
+					<AbsDimension x="32" y="32"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="-12" y="-178"/>
+						</Offset>
+					</Anchor>
+				</Anchors>				
+			</Texture>	
+			<FontString name="TalentI_Talent25Text" inherits="GameFontNormal" text="0" hidden="true">		
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="-12" y="-178"/>
+						</Offset>
+					</Anchor>
+				</Anchors>	
+			</FontString>
+
+			<Texture name="TalentI_Talent26BG" file="Interface\TalentFrame\TalentFrame-RankBorder" hidden="true">
+				<Size>
+					<AbsDimension x="32" y="32"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="48" y="-178"/>
+						</Offset>
+					</Anchor>
+				</Anchors>				
+			</Texture>	
+			<FontString name="TalentI_Talent26Text" inherits="GameFontNormal" text="0" hidden="true">		
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="48" y="-178"/>
+						</Offset>
+					</Anchor>
+				</Anchors>	
+			</FontString>
+			
+			<Texture name="TalentI_Talent27BG" file="Interface\TalentFrame\TalentFrame-RankBorder" hidden="true">
+				<Size>
+					<AbsDimension x="32" y="32"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="108" y="-178"/>
+						</Offset>
+					</Anchor>
+				</Anchors>				
+			</Texture>	
+			<FontString name="TalentI_Talent27Text" inherits="GameFontNormal" text="0" hidden="true">		
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="108" y="-178"/>
+						</Offset>
+					</Anchor>
+				</Anchors>	
+			</FontString>
+			
+			
+			
+			
+			
+			
+			
+			<Texture name="TalentI_TalentAmountBG" file="Interface\TalentFrame\TalentFrame-RankBorder" hidden="true">
+				<Size>
+					<AbsDimension x="50" y="40"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="-114" y="185"/>
+						</Offset>
+					</Anchor>
+				</Anchors>				
+			</Texture>						
+			<FontString name="TalentI_TalentAmountText" inherits="GameFontNormal" text="0" hidden="true">		
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="-114" y="185"/>
+						</Offset>
+					</Anchor>
+				</Anchors>	
+			</FontString>			
+			
+			
+		</Layer>
+				
+		<Layer level="HIGHLIGHT">
+		
+		
+		
+		
+		
+		</Layer>
+		
+	</Layers>
+	
+	<Frames>
+	
+	
+		<Button name="$parentX" inherits="UIPanelCloseButton">
+			<Size>
+				<AbsDimension x="30" y="30"/>
+			</Size>
+		    <Anchors>
+		        <Anchor point="CENTER" relativePoint="TOPRIGHT">
+		            <Offset>
+		                <AbsDimension x="-25" y="-20"/>
+		            </Offset>
+		        </Anchor>
+		    </Anchors>
+		    <Scripts>
+				<OnClick>
+				        TalentWindowFrame:SetUserPlaced(false);
+						TalentI_CloseWindow();
+				</OnClick>
+			</Scripts>
+		</Button>
+		
+		<Button name="$parentTab1">
+			<Size>
+				<AbsDimension x="80" y="20"/>
+			</Size>
+		    <Anchors>
+		        <Anchor point="BOTTOM">
+		            <Offset>
+		                <AbsDimension x="-85" y="-10"/>
+		            </Offset>
+		        </Anchor>
+		    </Anchors>
+		    <Scripts>
+				<OnClick>
+				    TalentI_ChangeTab("1");
+				</OnClick>
+			</Scripts>
+		</Button>
+		
+		
+		<Button name="$parentTab2">
+			<Size>
+				<AbsDimension x="80" y="20"/>
+			</Size>
+		    <Anchors>
+		        <Anchor point="BOTTOM">
+		            <Offset>
+		                <AbsDimension x="0" y="-10"/>
+		            </Offset>
+		        </Anchor>
+		    </Anchors>
+		    <Scripts>
+				<OnClick>
+				    TalentI_ChangeTab("2");
+				</OnClick>
+			</Scripts>
+		</Button>
+		
+		<Button name="$parentTab3">
+			<Size>
+				<AbsDimension x="80" y="20"/>
+			</Size>
+		    <Anchors>
+		        <Anchor point="BOTTOM">
+		            <Offset>
+		                <AbsDimension x="87" y="-10"/>
+		            </Offset>
+		        </Anchor>
+		    </Anchors>
+		    <Scripts>
+				<OnClick>
+				    TalentI_ChangeTab("3");
+				</OnClick>
+			</Scripts>
+		</Button>
+		
+		
+		<Button name="TalentI_Talent0tip">
+			<Size>
+				<AbsDimension x="36" y="36"/>
+			</Size>	
+			<Anchors>
+				<Anchor point="CENTER">
+					<Offset>
+						<AbsDimension x="-90" y="140"/>
+					</Offset>
+				</Anchor>
+			</Anchors>		
+			<Scripts>
+				<OnLoad>
+					this.tooltip = "empty";
+					this:SetFrameLevel(5);
+				</OnLoad>
+				<OnEnter>
+					GameTooltip:SetOwner(this, "ANCHOR_RIGHT");
+					GameTooltip:SetText(this.tooltip);
+				</OnEnter>
+				<OnLeave>
+					GameTooltip:Hide();
+				</OnLeave>				
+			</Scripts>
+		</Button>
+		
+		
+		<Button name="TalentI_Talent1tip">
+				<Size>
+					<AbsDimension x="36" y="36"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="-30" y="140"/>
+						</Offset>
+					</Anchor>
+				</Anchors>		
+			<Scripts>
+				<OnLoad>
+					this.tooltip = "empty1";
+					this:SetFrameLevel(5);
+				</OnLoad>
+				<OnEnter>
+					GameTooltip:SetOwner(this, "ANCHOR_RIGHT");
+					GameTooltip:SetText(this.tooltip);
+				</OnEnter>
+				<OnLeave>
+					GameTooltip:Hide();
+				</OnLeave>				
+			</Scripts>
+		</Button>	
+
+		<Button name="TalentI_Talent2tip">
+				<Size>
+					<AbsDimension x="36" y="36"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="30" y="140"/>
+						</Offset>
+					</Anchor>
+				</Anchors>		
+			<Scripts>
+				<OnLoad>
+					this.tooltip = "empty2";
+					this:SetFrameLevel(5);
+				</OnLoad>
+				<OnEnter>
+					GameTooltip:SetOwner(this, "ANCHOR_RIGHT");
+					GameTooltip:SetText(this.tooltip);
+				</OnEnter>
+				<OnLeave>
+					GameTooltip:Hide();
+				</OnLeave>				
+			</Scripts>
+		</Button>	
+
+		<Button name="TalentI_Talent3tip">
+				<Size>
+					<AbsDimension x="36" y="36"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="90" y="140"/>
+						</Offset>
+					</Anchor>
+				</Anchors>		
+			<Scripts>
+				<OnLoad>
+					this.tooltip = "empty3";
+					this:SetFrameLevel(5);
+				</OnLoad>
+				<OnEnter>
+					GameTooltip:SetOwner(this, "ANCHOR_RIGHT");
+					GameTooltip:SetText(this.tooltip);
+				</OnEnter>
+				<OnLeave>
+					GameTooltip:Hide();
+				</OnLeave>				
+			</Scripts>
+		</Button>		
+		
+		<Button name="TalentI_Talent4tip">
+				<Size>
+					<AbsDimension x="36" y="36"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="-90" y="90"/>
+						</Offset>
+					</Anchor>
+				</Anchors>	
+			<Scripts>
+				<OnLoad>
+					this.tooltip = "empty4";
+					this:SetFrameLevel(5);
+				</OnLoad>
+				<OnEnter>
+					GameTooltip:SetOwner(this, "ANCHOR_RIGHT");
+					GameTooltip:SetText(this.tooltip);
+				</OnEnter>
+				<OnLeave>
+					GameTooltip:Hide();
+				</OnLeave>				
+			</Scripts>
+		</Button>		
+		
+		<Button name="TalentI_Talent5tip">
+				<Size>
+					<AbsDimension x="36" y="36"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="-30" y="90"/>
+						</Offset>
+					</Anchor>
+				</Anchors>	
+			<Scripts>
+				<OnLoad>
+					this.tooltip = "empty5";
+					this:SetFrameLevel(5);
+				</OnLoad>
+				<OnEnter>
+					GameTooltip:SetOwner(this, "ANCHOR_RIGHT");
+					GameTooltip:SetText(this.tooltip);
+				</OnEnter>
+				<OnLeave>
+					GameTooltip:Hide();
+				</OnLeave>				
+			</Scripts>
+		</Button>	 
+
+		<Button name="TalentI_Talent6tip">
+				<Size>
+					<AbsDimension x="36" y="36"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="30" y="90"/>
+						</Offset>
+					</Anchor>
+				</Anchors>	
+			<Scripts>
+				<OnLoad>
+					this.tooltip = "empty6";
+					this:SetFrameLevel(5);
+				</OnLoad>
+				<OnEnter>
+					GameTooltip:SetOwner(this, "ANCHOR_RIGHT");
+					GameTooltip:SetText(this.tooltip);
+				</OnEnter>
+				<OnLeave>
+					GameTooltip:Hide();
+				</OnLeave>				
+			</Scripts>
+		</Button>		
+
+		<Button name="TalentI_Talent7tip">
+				<Size>
+					<AbsDimension x="36" y="36"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="90" y="90"/>
+						</Offset>
+					</Anchor>
+				</Anchors>	
+			<Scripts>
+				<OnLoad>
+					this.tooltip = "empty7";
+					this:SetFrameLevel(5);
+				</OnLoad>
+				<OnEnter>
+					GameTooltip:SetOwner(this, "ANCHOR_RIGHT");
+					GameTooltip:SetText(this.tooltip);
+				</OnEnter>
+				<OnLeave>
+					GameTooltip:Hide();
+				</OnLeave>				
+			</Scripts>
+		</Button>	
+
+		<Button name="TalentI_Talent8tip">
+				<Size>
+					<AbsDimension x="36" y="36"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="-90" y="40"/>
+						</Offset>
+					</Anchor>
+				</Anchors>	
+			<Scripts>
+				<OnLoad>
+					this.tooltip = "empty8";
+					this:SetFrameLevel(5);
+				</OnLoad>
+				<OnEnter>
+					GameTooltip:SetOwner(this, "ANCHOR_RIGHT");
+					GameTooltip:SetText(this.tooltip);
+				</OnEnter>
+				<OnLeave>
+					GameTooltip:Hide();
+				</OnLeave>				
+			</Scripts>
+		</Button>		
+	
+		<Button name="TalentI_Talent9tip">
+				<Size>
+					<AbsDimension x="36" y="36"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="-30" y="40"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			<Scripts>
+				<OnLoad>
+					this.tooltip = "empty9";
+					this:SetFrameLevel(5);
+				</OnLoad>
+				<OnEnter>
+					GameTooltip:SetOwner(this, "ANCHOR_RIGHT");
+					GameTooltip:SetText(this.tooltip);
+				</OnEnter>
+				<OnLeave>
+					GameTooltip:Hide();
+				</OnLeave>				
+			</Scripts>
+		</Button>		
+		
+		<Button name="TalentI_Talent10tip">
+				<Size>
+					<AbsDimension x="36" y="36"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="30" y="40"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			<Scripts>
+				<OnLoad>
+					this.tooltip = "empty10";
+					this:SetFrameLevel(5);
+				</OnLoad>
+				<OnEnter>
+					GameTooltip:SetOwner(this, "ANCHOR_RIGHT");
+					GameTooltip:SetText(this.tooltip);
+				</OnEnter>
+				<OnLeave>
+					GameTooltip:Hide();
+				</OnLeave>				
+			</Scripts>
+		</Button>
+		
+		<Button name="TalentI_Talent11tip">
+				<Size>
+					<AbsDimension x="36" y="36"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="90" y="40"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			<Scripts>
+				<OnLoad>
+					this.tooltip = "empty11";
+					this:SetFrameLevel(5);
+				</OnLoad>
+				<OnEnter>
+					GameTooltip:SetOwner(this, "ANCHOR_RIGHT");
+					GameTooltip:SetText(this.tooltip);
+				</OnEnter>
+				<OnLeave>
+					GameTooltip:Hide();
+				</OnLeave>				
+			</Scripts>
+		</Button>
+		
+		<Button name="TalentI_Talent12tip">
+				<Size>
+					<AbsDimension x="36" y="36"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="-90" y="-10"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			<Scripts>
+				<OnLoad>
+					this.tooltip = "empty12";
+					this:SetFrameLevel(5);
+				</OnLoad>
+				<OnEnter>
+					GameTooltip:SetOwner(this, "ANCHOR_RIGHT");
+					GameTooltip:SetText(this.tooltip);
+				</OnEnter>
+				<OnLeave>
+					GameTooltip:Hide();
+				</OnLeave>				
+			</Scripts>
+		</Button>
+		
+		<Button name="TalentI_Talent13tip">
+				<Size>
+					<AbsDimension x="36" y="36"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="-30" y="-10"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			<Scripts>
+				<OnLoad>
+					this.tooltip = "empty13";
+					this:SetFrameLevel(5);
+				</OnLoad>
+				<OnEnter>
+					GameTooltip:SetOwner(this, "ANCHOR_RIGHT");
+					GameTooltip:SetText(this.tooltip);
+				</OnEnter>
+				<OnLeave>
+					GameTooltip:Hide();
+				</OnLeave>				
+			</Scripts>
+		</Button>	
+
+		<Button name="TalentI_Talent14tip">
+				<Size>
+					<AbsDimension x="36" y="36"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="30" y="-10"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			<Scripts>
+				<OnLoad>
+					this.tooltip = "empty14";
+					this:SetFrameLevel(5);
+				</OnLoad>
+				<OnEnter>
+					GameTooltip:SetOwner(this, "ANCHOR_RIGHT");
+					GameTooltip:SetText(this.tooltip);
+				</OnEnter>
+				<OnLeave>
+					GameTooltip:Hide();
+				</OnLeave>				
+			</Scripts>
+		</Button>	
+
+		<Button name="TalentI_Talent15tip">
+				<Size>
+					<AbsDimension x="36" y="36"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="90" y="-10"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			<Scripts>
+				<OnLoad>
+					this.tooltip = "empty15";
+					this:SetFrameLevel(5);
+				</OnLoad>
+				<OnEnter>
+					GameTooltip:SetOwner(this, "ANCHOR_RIGHT");
+					GameTooltip:SetText(this.tooltip);
+				</OnEnter>
+				<OnLeave>
+					GameTooltip:Hide();
+				</OnLeave>				
+			</Scripts>
+		</Button>		
+
+		<Button name="TalentI_Talent16tip">
+				<Size>
+					<AbsDimension x="36" y="36"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="-90" y="-60"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			<Scripts>
+				<OnLoad>
+					this.tooltip = "empty16";
+					this:SetFrameLevel(5);
+				</OnLoad>
+				<OnEnter>
+					GameTooltip:SetOwner(this, "ANCHOR_RIGHT");
+					GameTooltip:SetText(this.tooltip);
+				</OnEnter>
+				<OnLeave>
+					GameTooltip:Hide();
+				</OnLeave>				
+			</Scripts>
+		</Button>
+		
+		<Button name="TalentI_Talent17tip">
+				<Size>
+					<AbsDimension x="36" y="36"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="-30" y="-60"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			<Scripts>
+				<OnLoad>
+					this.tooltip = "empty17";
+					this:SetFrameLevel(5);
+				</OnLoad>
+				<OnEnter>
+					GameTooltip:SetOwner(this, "ANCHOR_RIGHT");
+					GameTooltip:SetText(this.tooltip);
+				</OnEnter>
+				<OnLeave>
+					GameTooltip:Hide();
+				</OnLeave>				
+			</Scripts>
+		</Button>
+
+
+		<Button name="TalentI_Talent18tip">
+				<Size>
+					<AbsDimension x="36" y="36"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="30" y="-60"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			<Scripts>
+				<OnLoad>
+					this.tooltip = "empty18";
+					this:SetFrameLevel(5);
+				</OnLoad>
+				<OnEnter>
+					GameTooltip:SetOwner(this, "ANCHOR_RIGHT");
+					GameTooltip:SetText(this.tooltip);
+				</OnEnter>
+				<OnLeave>
+					GameTooltip:Hide();
+				</OnLeave>				
+			</Scripts>
+		</Button>
+
+		<Button name="TalentI_Talent19tip">
+				<Size>
+					<AbsDimension x="36" y="36"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="90" y="-60"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			<Scripts>
+				<OnLoad>
+					this.tooltip = "empty19";
+					this:SetFrameLevel(5);
+				</OnLoad>
+				<OnEnter>
+					GameTooltip:SetOwner(this, "ANCHOR_RIGHT");
+					GameTooltip:SetText(this.tooltip);
+				</OnEnter>
+				<OnLeave>
+					GameTooltip:Hide();
+				</OnLeave>				
+			</Scripts>
+		</Button>
+
+		<Button name="TalentI_Talent20tip">
+				<Size>
+					<AbsDimension x="36" y="36"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="-90" y="-110"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			<Scripts>
+				<OnLoad>
+					this.tooltip = "empty20";
+					this:SetFrameLevel(5);
+				</OnLoad>
+				<OnEnter>
+					GameTooltip:SetOwner(this, "ANCHOR_RIGHT");
+					GameTooltip:SetText(this.tooltip);
+				</OnEnter>
+				<OnLeave>
+					GameTooltip:Hide();
+				</OnLeave>				
+			</Scripts>
+		</Button>
+
+		<Button name="TalentI_Talent21tip">
+				<Size>
+					<AbsDimension x="36" y="36"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="-30" y="-110"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			<Scripts>
+				<OnLoad>
+					this.tooltip = "empty21";
+					this:SetFrameLevel(5);
+				</OnLoad>
+				<OnEnter>
+					GameTooltip:SetOwner(this, "ANCHOR_RIGHT");
+					GameTooltip:SetText(this.tooltip);
+				</OnEnter>
+				<OnLeave>
+					GameTooltip:Hide();
+				</OnLeave>				
+			</Scripts>
+		</Button>		
+
+		<Button name="TalentI_Talent22tip">
+				<Size>
+					<AbsDimension x="36" y="36"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="30" y="-110"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			<Scripts>
+				<OnLoad>
+					this.tooltip = "empty22";
+					this:SetFrameLevel(5);
+				</OnLoad>
+				<OnEnter>
+					GameTooltip:SetOwner(this, "ANCHOR_RIGHT");
+					GameTooltip:SetText(this.tooltip);
+				</OnEnter>
+				<OnLeave>
+					GameTooltip:Hide();
+				</OnLeave>				
+			</Scripts>
+		</Button>	
+
+
+		<Button name="TalentI_Talent23tip">
+				<Size>
+					<AbsDimension x="36" y="36"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="90" y="-110"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			<Scripts>
+				<OnLoad>
+					this.tooltip = "empty23";
+					this:SetFrameLevel(5);
+				</OnLoad>
+				<OnEnter>
+					GameTooltip:SetOwner(this, "ANCHOR_RIGHT");
+					GameTooltip:SetText(this.tooltip);
+				</OnEnter>
+				<OnLeave>
+					GameTooltip:Hide();
+				</OnLeave>				
+			</Scripts>
+		</Button>
+
+		<Button name="TalentI_Talent24tip">
+				<Size>
+					<AbsDimension x="36" y="36"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="-90" y="-160"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			<Scripts>
+				<OnLoad>
+					this.tooltip = "empty24";
+					this:SetFrameLevel(5);
+				</OnLoad>
+				<OnEnter>
+					GameTooltip:SetOwner(this, "ANCHOR_RIGHT");
+					GameTooltip:SetText(this.tooltip);
+				</OnEnter>
+				<OnLeave>
+					GameTooltip:Hide();
+				</OnLeave>				
+			</Scripts>
+		</Button>
+
+		<Button name="TalentI_Talent25tip">
+				<Size>
+					<AbsDimension x="36" y="36"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="-30" y="-160"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			<Scripts>
+				<OnLoad>
+					this.tooltip = "empty25";
+					this:SetFrameLevel(5);
+				</OnLoad>
+				<OnEnter>
+					GameTooltip:SetOwner(this, "ANCHOR_RIGHT");
+					GameTooltip:SetText(this.tooltip);
+				</OnEnter>
+				<OnLeave>
+					GameTooltip:Hide();
+				</OnLeave>				
+			</Scripts>
+		</Button>
+
+		<Button name="TalentI_Talent26tip">
+				<Size>
+					<AbsDimension x="36" y="36"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="30" y="-160"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			<Scripts>
+				<OnLoad>
+					this.tooltip = "empty26";
+					this:SetFrameLevel(5);
+				</OnLoad>
+				<OnEnter>
+					GameTooltip:SetOwner(this, "ANCHOR_RIGHT");
+					GameTooltip:SetText(this.tooltip);
+				</OnEnter>
+				<OnLeave>
+					GameTooltip:Hide();
+				</OnLeave>				
+			</Scripts>
+		</Button>	
+
+		<Button name="TalentI_Talent27tip">
+				<Size>
+					<AbsDimension x="36" y="36"/>
+				</Size>	
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="90" y="-160"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			<Scripts>
+				<OnLoad>
+					this.tooltip = "empty27";
+					this:SetFrameLevel(5);
+				</OnLoad>
+				<OnEnter>
+					GameTooltip:SetOwner(this, "ANCHOR_RIGHT");
+					GameTooltip:SetText(this.tooltip);
+				</OnEnter>
+				<OnLeave>
+					GameTooltip:Hide();
+				</OnLeave>				
+			</Scripts>
+		</Button>		
+		
+	</Frames>
+	<Scripts>
+            <OnLoad> 
+			    TalentWindowFrame:SetClampedToScreen(true)
+			    TalentWindowFrame:RegisterForDrag("LeftButton")
+			</OnLoad>
+            <OnDragStart>
+                TalentWindowFrame:StartMoving()
+            </OnDragStart>
+            <OnDragStop>
+                TalentWindowFrame:StopMovingOrSizing()
+            </OnDragStop>
+	</Scripts>	
+</Frame>
+</Ui>
